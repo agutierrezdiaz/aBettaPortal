@@ -13,7 +13,6 @@
 	</parent>
 
 	<!-- webapp pom -->
-	<groupId>es.a.betta</groupId>
 	<artifactId>a-betta-portal-webapp</artifactId>
 	<version>${betta.webapp.version}</version>
 	<packaging>war</packaging>
@@ -61,5 +60,12 @@
 
 	<build>
 		<finalName>a-betta-portal-webapp</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+			</plugin>
+		</plugins>
 	</build>
 </project>
