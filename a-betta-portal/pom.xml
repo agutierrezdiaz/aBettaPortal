@@ -13,6 +13,7 @@
 
 	<!-- sub modules -->
 	<modules>
+		<module>a-betta-portal-service</module>
 		<module>a-betta-portal-webapp</module>
 	</modules>
 
@@ -24,6 +25,7 @@
 
 		<!-- modules properties -->
 		<betta.version>1.0-SNAPSHOT</betta.version>
+		<betta.service.version>1.0-SNAPSHOT</betta.service.version>
 		<betta.webapp.version>1.0-SNAPSHOT</betta.webapp.version>
 	</properties>
 

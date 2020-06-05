@@ -1,7 +1,7 @@
-package es.a.betta.webapp;
+package es.a.betta.portal.webapp;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import es.a.betta.webapp.config.SpringConfig;
+import es.a.betta.portal.webapp.config.SpringConfig;
 
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

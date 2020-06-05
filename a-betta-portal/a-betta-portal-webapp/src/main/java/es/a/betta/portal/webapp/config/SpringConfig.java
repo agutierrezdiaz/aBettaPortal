@@ -1,4 +1,4 @@
-package es.a.betta.webapp.config;
+package es.a.betta.portal.webapp.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -21,7 +21,6 @@ public class SpringConfig implements WebMvcConfigurer {
 	@Autowired
 	private ApplicationContext applicationContext;
 
-	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}

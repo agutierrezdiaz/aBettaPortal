@@ -1,4 +1,4 @@
-package es.a.betta.webapp.controller;
+package es.a.betta.portal.webapp.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
