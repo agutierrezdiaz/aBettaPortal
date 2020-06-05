@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- parent pom -->
+	<parent>
+		<groupId>es.a.betta</groupId>
+		<artifactId>a-betta-portal</artifactId>
+		<version>${betta.version}</version>
+	</parent>
+
+	<!-- webapp pom -->
+	<groupId>es.a.betta</groupId>
+	<artifactId>a-betta-portal-webapp</artifactId>
+	<version>${betta.webapp.version}</version>
+	<packaging>war</packaging>
+	<name>a-betta-portal-webapp Maven Webapp</name>
+
+	<properties>
+		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<!-- servlet api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- thymeleaf view -->
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.thymeleaf</groupId>
+			<artifactId>thymeleaf-spring5</artifactId>
+			<version>${thymeleaf.version}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>a-betta-portal-webapp</finalName>
+	</build>
+</project>
