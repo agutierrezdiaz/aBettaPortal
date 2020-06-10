@@ -13,7 +13,7 @@ public class InitController {
 	@GetMapping("/")
 	public String initPortal() {
 		logger.debug("a-Betta portal is running...");
-		return "index";
+		return "home";
 	}
 	
 }
