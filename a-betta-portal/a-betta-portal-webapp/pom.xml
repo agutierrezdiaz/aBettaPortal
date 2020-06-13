@@ -9,12 +9,12 @@
 	<parent>
 		<groupId>es.a.betta</groupId>
 		<artifactId>a-betta-portal</artifactId>
-		<version>${betta.version}</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<!-- webapp pom -->
 	<artifactId>a-betta-portal-webapp</artifactId>
-	<version>${betta.webapp.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>a-betta-portal-webapp Maven Webapp</name>
 
@@ -44,6 +44,11 @@
 			<artifactId>spring-test</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-webflux</artifactId> -->
+		<!-- <version>2.2.7.RELEASE</version> -->
+		<!-- </dependency> -->
 
 		<!-- servlet api -->
 		<dependency>
@@ -66,18 +71,22 @@
 		</dependency>
 
 		<!-- aBetta modules -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>es.a.betta</groupId> -->
-<!-- 			<artifactId>a-betta-portal-service</artifactId> -->
-<!-- 			<version>${betta.service.version}</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>es.a.betta</groupId>
+			<artifactId>a-betta-portal-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<finalName>a-betta-portal-webapp</finalName>
+
+		<!-- <pluginManagement> -->
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
 				<configuration>
 					<source>${javaVersion}</source>
 					<target>${javaVersion}</target>
@@ -86,8 +95,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.2</version>
+				<version>3.3.0</version>
 			</plugin>
 		</plugins>
+		<!-- </pluginManagement> -->
 	</build>
 </project>

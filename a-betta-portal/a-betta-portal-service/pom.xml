@@ -9,32 +9,63 @@
 	<parent>
 		<groupId>es.a.betta</groupId>
 		<artifactId>a-betta-portal</artifactId>
-		<version>${betta.version}</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<!-- service pom -->
 	<artifactId>a-betta-portal-service</artifactId>
-	<version>${betta.service.version}</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>a-betta-portal-service</name>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-mongodb-reactive</artifactId>
-			<version>2.2.7.RELEASE</version>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.12.5</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-webflux</artifactId>
-			<version>2.2.7.RELEASE</version>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>3.0.1.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>3.0.1.RELEASE</version>
 		</dependency>
 
-<!-- 		<dependency> -->
-<!-- 			<groupId>org.junit.jupiter</groupId> -->
-<!-- 			<artifactId>junit-jupiter-api</artifactId> -->
-<!-- 			<version>${junit.version}</version> -->
-<!-- 			<scope>test</scope> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-releasetrain</artifactId>
+			<version>Neumann-SR1</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-data-mongodb-reactive</artifactId> -->
+		<!-- <version>2.2.7.RELEASE</version> -->
+		<!-- </dependency> -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-webflux</artifactId> -->
+		<!-- <version>2.2.7.RELEASE</version> -->
+		<!-- </dependency> -->
+
+		<!-- <dependency> -->
+		<!-- <groupId>org.junit.jupiter</groupId> -->
+		<!-- <artifactId>junit-jupiter-api</artifactId> -->
+		<!-- <version>${junit.version}</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
 	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>spring-milestone</id>
+			<name>Spring Maven MILESTONE Repository</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+		</repository>
+	</repositories>
 
 </project>

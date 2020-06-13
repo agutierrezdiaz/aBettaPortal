@@ -7,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -18,14 +20,19 @@ import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
 @EnableWebMvc
 @Configuration
 @ComponentScan({ "es.a.betta" })
+@EnableMongoRepositories("org.a.betta.portal.service.repositories")
 public class SpringConfig implements WebMvcConfigurer {
 
 	@Autowired
 	private ApplicationContext applicationContext;
 
+	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
@@ -68,6 +75,14 @@ public class SpringConfig implements WebMvcConfigurer {
 		LocaleChangeInterceptor localeInterceptor = new LocaleChangeInterceptor();
 		localeInterceptor.setParamName("lang");
 		return localeInterceptor;
+	}
+	
+	public @Bean MongoClient mongoClient() {
+		return MongoClients.create("mongodb://localhost:27017");
+	}
+	
+	public @Bean MongoTemplate mongoTemplate() {
+		return new MongoTemplate(mongoClient(), "aBettaDB");
 	}
 
 }
