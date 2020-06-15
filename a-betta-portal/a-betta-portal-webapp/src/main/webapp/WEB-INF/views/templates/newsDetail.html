@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="areas/head :: head"></head>
+<body>
+	<header th:replace="areas/header :: header"></header>
+	
+	<main role="main">
+		<div th:replace="components/newsDetail :: newsDetail"></div>
+	</main>
+	<footer th:replace="areas/footer :: footer"></footer>
+</body>
+</html>

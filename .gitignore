@@ -98,3 +98,5 @@ $RECYCLE.BIN/
 
 # End of https://www.gitignore.io/api/maven,eclipse,windows
 a-betta-portal/a-betta-portal-service/.sts4-cache/
+
+a-betta-portal/a-betta-portal-webapp/.sts4-cache/

@@ -1,11 +1,12 @@
 package org.a.betta.portal.service.models.documents;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="news")
+@Document(collection="News")
 public class News {
 	
 	@Id
@@ -17,7 +18,18 @@ public class News {
 	private Date date;
 	private String image;
 	
-	public News() {}
+	public News(String name, String title, String subtitle) {
+		this.name = name;
+		this.title = title;
+		this.subtitle = subtitle;
+	}
+	
+//	public News(String name, String title, String subtitle, Date date) {
+//		this.name = name;
+//		this.title = title;
+//		this.subtitle = subtitle;
+//		this.date = date;
+//	}
 	
 	public String getId() {
 		return id;
@@ -65,6 +77,12 @@ public class News {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public void setDate(int y, int m, int d) {
+		Calendar auxDate = Calendar.getInstance();
+		auxDate.set(y, m, d);
+		this.date = auxDate.getTime();
 	}
 
 	public String getImage() {

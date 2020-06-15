@@ -1,5 +1,7 @@
 package es.a.betta.portal.webapp;
 
+import org.a.betta.portal.service.repositories.NewsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import es.a.betta.portal.webapp.config.SpringConfig;

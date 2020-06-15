@@ -11,12 +11,6 @@
 	<packaging>pom</packaging>
 	<name>a-betta-portal</name>
 
-	<!-- sub modules -->
-	<modules>
-		<module>a-betta-portal-service</module>
-		<module>a-betta-portal-webapp</module>
-	</modules>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<javaVersion>1.8</javaVersion>
@@ -32,10 +26,16 @@
 
 	<dependencies>
 		<!-- Spring DI for all modules -->
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.springframework</groupId> -->
+<!-- 			<artifactId>spring-context</artifactId> -->
+<!-- 			<version>${spring.version}</version> -->
+<!-- 		</dependency> -->
+
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${spring.version}</version>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>2.2.8.RELEASE</version>
 		</dependency>
 
 		<!-- unit test -->
@@ -67,4 +67,10 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<!-- sub modules -->
+	<modules>
+		<module>a-betta-portal-service</module>
+		<module>a-betta-portal-webapp</module>
+	</modules>
 </project>

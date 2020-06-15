@@ -77,11 +77,13 @@ public class SpringConfig implements WebMvcConfigurer {
 		return localeInterceptor;
 	}
 	
-	public @Bean MongoClient mongoClient() {
+	@Bean
+	public MongoClient mongoClient() {
 		return MongoClients.create("mongodb://localhost:27017");
 	}
 	
-	public @Bean MongoTemplate mongoTemplate() {
+	@Bean
+	public MongoTemplate mongoTemplate() {
 		return new MongoTemplate(mongoClient(), "aBettaDB");
 	}
 
