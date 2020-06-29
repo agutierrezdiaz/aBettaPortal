@@ -1,5 +1,10 @@
+body {
+	min-height: 100vh;
+}
+
 main {
 	margin-top: 50px;
+	flex: 1;
 }
 
 .bettahead {

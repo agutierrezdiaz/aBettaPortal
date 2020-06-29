@@ -26,7 +26,7 @@ import com.mongodb.client.MongoClients;
 @EnableWebMvc
 @Configuration
 @ComponentScan({ "es.a.betta" })
-@EnableMongoRepositories("org.a.betta.portal.service.repositories")
+@EnableMongoRepositories("es.a.betta.portal.service.repositories")
 public class SpringConfig implements WebMvcConfigurer {
 
 	@Autowired

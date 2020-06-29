@@ -1,11 +1,12 @@
-package org.a.betta.portal.service.models.documents;
+package es.a.betta.portal.service.models.documents;
 
 import java.util.Collection;
 import java.util.Date;
 
-import org.a.betta.portal.service.models.documents.summary.Summary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import es.a.betta.portal.service.models.documents.summary.Summary;
 
 @Document(collection = "articles")
 public class Articles {

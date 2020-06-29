@@ -1,4 +1,4 @@
-package org.a.betta.portal.service.models.documents;
+package es.a.betta.portal.service.models.documents;
 
 import java.util.Date;
 

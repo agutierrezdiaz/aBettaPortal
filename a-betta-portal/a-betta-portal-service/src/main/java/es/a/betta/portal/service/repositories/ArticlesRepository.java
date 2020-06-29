@@ -1,6 +1,6 @@
-package org.a.betta.portal.service.repositories;
+package es.a.betta.portal.service.repositories;
 
-import org.a.betta.portal.service.models.documents.Articles;
+import es.a.betta.portal.service.models.documents.Articles;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

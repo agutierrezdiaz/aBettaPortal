@@ -1,4 +1,4 @@
-package org.a.betta.portal.service.utils;
+package es.a.betta.portal.service.utils;
 
 import java.util.Calendar;
 import java.util.Date;
