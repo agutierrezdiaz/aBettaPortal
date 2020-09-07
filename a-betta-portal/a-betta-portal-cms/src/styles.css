@@ -44,3 +44,42 @@ footer p {
 	height: 6em;
 	width: 6em;
 }
+
+.abetta-list {
+	padding: 10px;
+}
+
+.abetta-table {
+	background-color: #fff;
+}
+
+.abetta-table thead th {
+	background-color: #d2d2d2;
+}
+
+.abetta-table tbody {
+	font-size: 11pt;
+	cursor: pointer;
+}
+
+.abetta-list-menu {
+	background-color: #bd2137;
+	padding: 10px;
+	color: #fff;
+}
+
+.abetta-list-menu a {
+	color: #fff;
+	padding: .2rem 1rem;
+}
+
+.abetta-list-menu a:hover {
+	color: #eadbdb;
+}
+
+.abetta-list-menu h4 {
+	font-size: 1.3rem;
+	padding-left: 15px;
+	border-bottom: #dc3545 1px solid;
+  padding-bottom: 5px;
+}

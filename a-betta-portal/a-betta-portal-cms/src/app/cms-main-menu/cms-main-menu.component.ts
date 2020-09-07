@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'cms-main-menu',
-  templateUrl: './cms-main-menu.component.html',
-  styleUrls: ['./cms-main-menu.component.css']
+  templateUrl: './cms-main-menu.component.html'
 })
 export class CmsMainMenuComponent implements OnInit {
 

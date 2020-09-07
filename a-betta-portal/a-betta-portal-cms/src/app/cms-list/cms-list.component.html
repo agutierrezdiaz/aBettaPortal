@@ -1,0 +1,47 @@
+<div class="container-fluid p-0">
+
+  <div class="row mb-2 mb-xl-4">
+    <div class="col-auto d-none d-sm-block">
+      <h3>Articles</h3>
+    </div>
+  </div>
+
+  <div class="row abetta-list">
+      <div class="w-75">
+        <table class="table table-sm abetta-table table-hover">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Title</th>
+              <th scope="col">Date</th>
+              <th scope="col">Author</th>
+              <th scope="col">Categories</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let article of articles" class="row-selectable">
+              <td>
+                <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="form-check-input" id="{{article.id}}">
+                </div>
+              </td>
+              <td>{{article.title}}</td>
+              <td>{{article.date | date:"dd, MMMM yyyy"}}</td>
+              <td>{{article.author}}</td>
+              <td>{{article.categories}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="w-25">
+        <div class="abetta-list-menu">
+            <h4>Actions</h4>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="">Add article</a></li>
+              <li class="nav-item"><a class="nav-link" href="/form">Edit article</a></li>
+              <li class="nav-item"><a class="nav-link" href="">Remove article</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+</div>

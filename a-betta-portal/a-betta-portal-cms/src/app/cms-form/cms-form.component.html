@@ -1,0 +1,44 @@
+<div class="container-fluid p-0">
+
+  <div class="row mb-2 mb-xl-4">
+    <div class="col-auto d-none d-sm-block">
+      <h3>Article</h3>
+    </div>
+  </div>
+
+  <form #articleForm="ngForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputName">Name</label>
+        <input type="text" class="form-control" id="inputName" name="name" [(ngModel)]="articles.name" #name="ngModel">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputTitle">Title</label>
+      <input type="text" class="form-control" id="inputTitle" name="title" [(ngModel)]="articles.title" #title="ngModel">
+    </div>
+    <div class="form-group">
+      <label for="inputSubtitle">Subtitle</label>
+      <input type="text" class="form-control" id="inputSubtitle" name="subtitle" [(ngModel)]="articles.subtitle" #subtitle="ngModel">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="inputAuthor">Author</label>
+        <input type="text" class="form-control" id="inputAuthor" name="author" [(ngModel)]="articles.author" #author="ngModel">
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputDate">Date</label>
+        <input type="date" id="inputDate" class="form-control" name="date" [(ngModel)]="articles.date" #date="ngModel">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck">
+        <label class="form-check-label" for="gridCheck">
+          Check me out
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
